@@ -1,0 +1,27 @@
+/* src/components/Header.module.css */
+.logo {
+    height: 1.2rem; /* アイコンの高さを調整 */
+    width: auto;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navItem {
+    margin: 0 1rem; /* リンクの間隔を調整 */
+}
+
+.navLink {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.7rem;
+}

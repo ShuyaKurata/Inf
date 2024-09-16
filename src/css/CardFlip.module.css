@@ -1,0 +1,67 @@
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+.cardContainer {
+    position: relative;
+    width: 90%;
+    height: 90%; /* スクロールで動きが分かるように */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 50px;
+    /* background-color: #1dd1a1; */
+}
+
+.card {
+    position: absolute;
+    width: 50vw;
+    height: 80vh;
+    background-color: #f5f5f5; /* 暗めの白色 (ややグレー) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2); /* より濃く深い影 */
+    top: 10%;
+    /* transition: z-index 0.3s ease; */
+}
+
+
+.cardContent {
+    color: rgb(12, 11, 11);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.leftCard{
+    /* background-color: #1dd1a1; */
+    /* left:20px, */
+
+}
+
+.rightCard{
+/* background-color: #ff6b6b; */
+/* right: 2px; */
+}
+
+/* カードがアクティブになったときのスタイル */
+.isActive {
+    z-index: 10; /* 他の要素より前面に表示 */
+    filter: brightness(1.1); /* 明るさを少しアップ */
+    transition: transform 0.3s ease, filter 0.3s ease; /* アニメーション */
+}
+
+.img {
+    width: 80px;
+    height: 80px;
+    background-size: contain;
+    transform-origin: center; /* 要素の中心を回転の基準にする */
+}
+
+
+.logo{
+ height: 100%;
+ width: 100%;
+}

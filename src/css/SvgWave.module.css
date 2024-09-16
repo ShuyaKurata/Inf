@@ -1,0 +1,22 @@
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -45%;
+}
+.path {
+    /* fill: red; */
+    stroke: #17b4df;
+    stroke-width: 10px;
+    stroke-dasharray: 900px;
+    /* position: relative; */
+    /* z-index: 0; */
+}
+
+.svg{
+    position: relative;
+    z-index: 0;
+}

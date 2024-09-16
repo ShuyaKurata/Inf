@@ -1,0 +1,151 @@
+/* src/pages/HomePage.module.css */
+
+.homePage {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #f6f4f4;
+}
+
+/* hero */
+.heroSection {
+    height: 200vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0; /* 初期状態で非表示にする */
+    animation: fadeIn 1.5s ease-out forwards; /* フェードインアニメーション */
+    position: relative;
+    /* background: linear-gradient(120deg, #f8f8f8, #e8e8e8); 背景グラデーション */
+}
+
+
+.heroContent {
+    position: fixed;
+    top: 60%; /* スクロール時に画面の中央に固定 */
+    transform: translateY(-50%); /* 要素の高さの半分だけ上に移動 */
+
+}
+
+
+.heroTitle {
+    font-size: 8rem;
+    margin: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+    color: black;
+    position: relative;
+    z-index: -2;
+
+}
+
+
+.heroSubtitle {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease-out forwards;
+}
+
+.textSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 中央揃えにする */
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.textSection h2 {
+    top: 20px; /* スクロールに合わせてトップから20pxの位置に固定 */
+    font-size: 2rem;
+    margin: 0;
+    z-index: 1;
+}
+
+
+.child {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/* キューブのアニメーション */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* スライド */
+.scroll_container {
+    height: 400vh;
+  }
+  
+  .horizontal_scroll {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 400vw;
+    will-change: transform;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .scroll_contents {
+    height: 300px; /* 円のサイズを調整 */
+    width: 300px; /* 高さと幅を同じにして円を作成 */
+    display: flex; /* 中央寄せのためにflexboxを使用 */
+    justify-content: center; /* 横方向の中央寄せ */
+    align-items: center; /* 縦方向の中央寄せ */
+    background-color: black; /* 背景を黒に設定 */
+    color: white; /* テキストカラーを白に設定 */
+    font-family: 'Arial', sans-serif; /* おしゃれな感じのフォントに設定 */
+    font-size: 2rem; /* 文字サイズを大きく */
+    text-transform: uppercase; /* 文字を大文字に変換 */
+    letter-spacing: 0.1em; /* 文字間隔を少し広く */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* 光るエフェクトを追加 */
+    border-radius: 50%; /* 円形にする */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* 円形に軽い影を追加 */
+    margin: 0 auto; /* 中央に配置 */
+}
+
+
+  
+  .sticky_wrap {
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-x: hidden;
+
+  }
+  
+  
+  
+  .left {
+    margin-top: -30vh;
+    /* margin-left: 5vw; */
+  }
+  
+  .right {
+    text-align: right;
+    margin-top: 50vh;
+    margin-right: 5vw;
+  }

@@ -1,0 +1,37 @@
+.container {
+    height: 140vh; /* スクロールできるようにページ全体を長く */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+  }
+  
+  .textContainer {
+    height: 100vh; /* 1画面分の高さを占める */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .largeText {
+    align-items: center;
+    justify-content: center;
+    font-size: 10rem; /* 最初は非常に大きなサイズ */
+    transition: font-size 0.3s ease;
+    white-space: nowrap; /* スクリーンに収まらない大きな文字 */
+  }
+  
+  .staticTextContainer {
+    padding: 30px;
+  }
+  
+  .staticText {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 0;
+  }
+  

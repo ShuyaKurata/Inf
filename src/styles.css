@@ -1,0 +1,119 @@
+/* グローバルスタイル */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* コンテナ */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ヘッダー */
+header {
+    position: relative;
+    /* background-color: #f0f2f2; */
+    justify-content: center;
+    display: flex;
+    color: #161515;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    height: 40px; /* アイコンの高さを調整 */
+    width: auto;
+}
+
+
+/* セクション */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+section p {
+    text-align: center;
+    font-size: 16px;
+}
+
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* オープニングアニメーション */
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ビューポートの高さに合わせて全画面表示 */
+    background-color: #fff; /* 背景色（任意） */
+}
+
+.logo {
+    width: 150px; /* ロゴのサイズ */
+    animation: rotate 2s infinite linear; /* ロゴにアニメーションを適用（任意） */
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+*{outline: 1px solid magenta;
+}
