@@ -25,7 +25,7 @@ const Cube = () => {
                 start: 'top top',
                 end: '400% 40%',
                 scrub: true,
-                markers: true, // デバッグ用のマーカー
+                // markers: true, // デバッグ用のマーカー
                 pin: true,
                 onUpdate: (self) => {
                     const progress = self.progress;

@@ -26,25 +26,25 @@ const App = () => {
 
     return (
         <div>
-            {/* {isLoading ? (  // ローディング中はロゴを表示
+            {isLoading ? (  // ローディング中はロゴを表示
                 <div className="loading-screen">
                     <Logo />
                 </div>
-            ) : (  // ローディングが終わったらアプリを表示 */}
-            <Router>
-                <Header />
-                <Routes>
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/" element={<HomePage />} />
-                    {/* プロジェクト */}
-                    <Route path="/projects/project1" element={<Project1 />} />
+            ) : (  // ローディングが終わったらアプリを表示
+                <Router>
+                    <Header />
+                    <Routes>
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/" element={<HomePage />} />
+                        {/* プロジェクト */}
+                        <Route path="/projects/project1" element={<Project1 />} />
 
-                </Routes>
-                <Footer />
-            </Router>
+                    </Routes>
+                    <Footer />
+                </Router>
             )};
         </div>
     );
