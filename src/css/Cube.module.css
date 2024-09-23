@@ -3,6 +3,14 @@
     height: 100vh;
     perspective: 800px;
     /* margin: 100px auto; */
+    --mainWidth:45vw;
+    --space:40px;
+    /* --mainZ:calc(var(--mainWidth)/2 + (var(--space)));
+    --halfMainWidthPow:pow(var(--mainWidth)/2,2);
+    --mainZPow:calc(pow(var(--mainZ),2));
+    --subWidth:calc((var(--space))*sqrt(2));
+    --edgeZPow:calc(var(--mainZPow) + var(--halfMainWidthPow));
+    --subZ:calc(sqrt(var(--edgeZPow)-pow(var(--subWidth)/2,2))); */
   }
   
   .cube {
@@ -17,7 +25,7 @@
   
   .face {
     position: absolute;
-    width: 5%;
+    width: var(--subWidth);
     height: 50vh;
     background-color: rgb(255, 255, 255);
     border: 1px solid #ccc;
@@ -32,7 +40,7 @@
 
   .mainFace{
     position: absolute;
-    width: 60%;
+    width: var(--mainWidth);
     height: 50vh;
     background-color: rgb(255, 255, 255);
     border: 1px solid #ccc;
@@ -41,21 +49,21 @@
     align-items: center;
     font-size: 24px;
     top: 25%;
-    left: 25%;
+    left: 28%;
     color: black;
   }
   
   /* 8つの側面を45度ずつ回転して配置 */
-.side2 { transform: rotateY(0deg) translateZ(50%); }
-.side4 { transform: rotateY(90deg) translateZ(50%); }
-.side6 { transform: rotateY(180deg) translateZ(50%); }
-.side8 { transform: rotateY(270deg) translateZ(50%); }
+.side2 { transform: rotateY(0deg) translateZ(var(--mainZ)) }
+.side4 { transform: rotateY(90deg) translateZ(var(--mainZ)) }
+.side6 { transform: rotateY(180deg) translateZ(var(--mainZ)) }
+.side8 { transform: rotateY(270deg) translateZ(var(--mainZ)) }
 
 
 
-.side1 { transform: rotateY(45deg) translateZ(200px); }
-.side3 { transform: rotateY(135deg) translateZ(200px); }
-.side5 { transform: rotateY(225deg) translateZ(200px); }
-.side7 { transform: rotateY(315deg) translateZ(200px); }
+.side1 { transform: rotateY(45deg) translateZ(var(--subZ)); }
+.side3 { transform: rotateY(135deg) translateZ(var(--subZ)); }
+.side5 { transform: rotateY(225deg) translateZ(var(--subZ)); }
+.side7 { transform: rotateY(315deg) translateZ(var(--subZ)); }
   
 

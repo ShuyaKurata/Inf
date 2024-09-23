@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Project1 from './pages/Projects/Project1';
 import './styles.css';
 import Logo from './pages/Logo';
+import Progress from './pages/Progress';
 
 const App = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,7 @@ const App = () => {
         // 3秒後にローディング状態を解除
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 3000); // 3000ミリ秒 (3秒)
+        }, 6900); // 3000ミリ秒 (3秒)
 
         // クリーンアップ
         return () => clearTimeout(timer);
@@ -26,25 +27,26 @@ const App = () => {
 
     return (
         <div>
-            {/* {isLoading ? (  // ローディング中はロゴを表示
+            {isLoading ? (  // ローディング中はロゴを表示
                 <div className="loading-screen">
                     <Logo />
                 </div>
-            ) : (  // ローディングが終わったらアプリを表示 */}
-            <Router>
-                <Header />
-                <Routes>
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/services" element={<ServicesPage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                    <Route path="/contact" element={<ContactPage />} />
-                    <Route path="/" element={<HomePage />} />
-                    {/* プロジェクト */}
-                    <Route path="/projects/project1" element={<Project1 />} />
+            ) : (  // ローディングが終わったらアプリを表示
+                <Router>
+                    <Header />
+                    <Routes>
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/projects" element={<ProjectsPage />} />
+                        <Route path="/contact" element={<ContactPage />} />
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/progress" element={<Progress />} />
+                        {/* プロジェクト */}
+                        <Route path="/projects/project1" element={<Project1 />} />
 
-                </Routes>
-                <Footer />
-            </Router>
+                    </Routes>
+                    <Footer />
+                </Router>
             )};
         </div>
     );

@@ -1,0 +1,82 @@
+.tree {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw; /* レスポンシブな間隔 */
+    padding: 2vw;
+  }
+  
+  .level {
+    display: flex;
+    justify-content: center;
+    gap: 5vw; /* レスポンシブな間隔 */
+  }
+  
+  .circleContainer {
+    position: relative;
+    width: 20vw; /* レスポンシブな幅 */
+    height: 20vw; /* レスポンシブな高さ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #76c7c0;
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .specialWater {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffcc00; /* 特別な要素に別の色 */
+    transition: height 0.5s ease-in-out;
+  }
+  
+  .taskName {
+    position: absolute;
+    font-size: 2vw; /* レスポンシブなフォントサイズ */
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  .progress {
+    position: absolute;
+    bottom: 5%;
+    font-size: 1.5vw; /* レスポンシブなフォントサイズ */
+    color: #555;
+  }
+  
+  @media (max-width: 768px) {
+    .circleContainer {
+      width: 40vw; /* 小さい画面用にサイズ調整 */
+      height: 40vw;
+    }
+  
+    .taskName {
+      font-size: 4vw; /* 小さい画面用にフォントサイズ調整 */
+    }
+  
+    .progress {
+      font-size: 3vw; /* 小さい画面用にフォントサイズ調整 */
+    }
+  }
+  
+ 
