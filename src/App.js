@@ -10,6 +10,7 @@ import HomePage from './pages/HomePage';
 import Project1 from './pages/Projects/Project1';
 import './styles.css';
 import Logo from './pages/Logo';
+import Progress from './pages/Progress';
 
 const App = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +19,7 @@ const App = () => {
         // 3秒後にローディング状態を解除
         const timer = setTimeout(() => {
             setIsLoading(false);
-        }, 3000); // 3000ミリ秒 (3秒)
+        }, 6900); // 3000ミリ秒 (3秒)
 
         // クリーンアップ
         return () => clearTimeout(timer);
