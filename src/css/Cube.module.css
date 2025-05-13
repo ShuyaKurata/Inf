@@ -20,7 +20,8 @@
     transform-style: preserve-3d;
     /* transition: transform 1s; */
     /* transform: rotateY(45deg); */
-    outline: 1px solid magenta;
+    outline: 3px solid magenta;
+    outline-offset: -1px;
   }
   
   .face {
@@ -34,7 +35,7 @@
     align-items: center;
     font-size: 24px;
     top: 25%;
-    left: 47%;
+    left: 50%;
     /* transform: translate(-50%,-50%); */
   }
 

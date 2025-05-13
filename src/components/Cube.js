@@ -99,21 +99,21 @@ const Cube = () => {
         <div className={styles.scene} ref={scene}>
             <div className={styles.cube} ref={cube}>
                 <div className={`${styles.face} ${styles.side1}`}></div>
-                <div className={`${styles.mainFace} ${styles.side2}`}>
+                {/* <div className={`${styles.mainFace} ${styles.side2}`}>
                     1
-                </div>
+                </div> */}
                 <div className={`${styles.face} ${styles.side3}`}></div>
-                <div className={`${styles.mainFace} ${styles.side4}`}>
+                {/* <div className={`${styles.mainFace} ${styles.side4}`}>
                     2
-                </div>
+                </div> */}
                 <div className={`${styles.face} ${styles.side5}`}></div>
-                <div className={`${styles.mainFace} ${styles.side6}`}>
+                {/* <div className={`${styles.mainFace} ${styles.side6}`}>
                     3
-                </div>
+                </div> */}
                 <div className={`${styles.face} ${styles.side7}`}></div>
-                <div className={`${styles.mainFace} ${styles.side8}`}>
+                {/* <div className={`${styles.mainFace} ${styles.side8}`}>
                     4
-                </div>
+                </div> */}
 
             </div>
         </div>
